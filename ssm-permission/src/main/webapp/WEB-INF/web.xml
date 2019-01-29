@@ -16,15 +16,15 @@
 
   <!-- spring mvc 配置 -->
   <servlet>
-    <servlet-name>spring</servlet-name>
+    <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>spring</servlet-name>
+    <servlet-name>springmvc</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <!-- Encoding -->
+  <!-- Encoding 配置 -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -52,7 +52,7 @@
     </init-param>
     <init-param>
       <param-name>loginPassword</param-name>
-      <param-value>druid</param-value>
+      <param-value>password</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
@@ -73,7 +73,9 @@
   </filter-mapping>
 
 
-
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
                       
 
 </web-app>
